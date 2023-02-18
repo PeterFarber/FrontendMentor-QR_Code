@@ -13,46 +13,12 @@
     />
 
     <script src="jquery.js"></script>
-    <script>
-      $(function () {
-        let searchParams = new URLSearchParams(window.location.search);
-        let page = "home";
-        if (searchParams.has("page") && searchParams.get("page").length > 0) {
-          page = searchParams.get("page");
-          $("#content").load(`src/core/${page}/index.html`);
-        } else {
-          $("#content").load(`src/core/${page}/index.html`);
-        }
-        $(`#${page}`).addClass("active");
-      });
-    </script>
+    <script src="main.js"></script>
 
     <link href="src/css/index.css" rel="stylesheet" />
     <title>Frontend Mentor | Challenges (Peter Farber)</title>
   </head>
   <body>
-    <header>
-      <b>Frontend Mentor Challenges</b>
-    </header>
-    <nav>
-      <ul>
-        <li><a id="home" href="index.html?page=home">Home</a></li>
-        <li><a id="qr-code" href="index.html?page=qr-code">QR Code</a></li>
-        <li>
-          <a id="expenses-chart" href="index.html?page=expenses-chart"
-            >Expenses Chart</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <main id="content"></main>
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Peter Farber</a>.
-      </div>
-    </footer>
+    <div class="content" id="content"></div>
   </body>
 </html>

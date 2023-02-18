@@ -1,0 +1,103 @@
+.challenges {
+  padding: 2rem;
+  display: grid;
+  align-content: flex-start;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+
+  font-family: Outfit;
+}
+
+.challenges a {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(31, 50, 81, 0.1),
+    0px 1px 3px 1px rgba(31, 50, 81, 0.15);
+
+  text-align: center;
+  text-decoration: none;
+}
+
+.challenges a:hover {
+  box-shadow: 0px 0px 1px 0px rgba(31, 50, 81, 0.1),
+    0px 0px 1px 1px rgba(31, 50, 81, 0.15);
+}
+
+.challenges a img {
+  border-radius: 1rem;
+}
+
+.challenges .content {
+  padding: 1rem;
+}
+.challenges h1 {
+  margin-top: 1rem;
+  color: rgb(31, 50, 81);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.challenges ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+.challenges ul li {
+  color: #fff;
+  flex: 1;
+  padding: 0.5rem;
+  margin-inline: 0.25rem;
+  border-radius: 1rem;
+}
+
+.html,
+.newbie {
+  color: rgb(106, 190, 205);
+  background: rgb(106, 190, 205);
+}
+
+.css {
+  color: rgb(62, 84, 163);
+  background: rgb(62, 84, 163);
+}
+
+.js {
+  color: rgb(207, 99, 144);
+  background: rgb(207, 99, 144);
+}
+
+.junior,
+.api {
+  color: rgb(170, 215, 66);
+  background: rgb(170, 215, 66);
+}
+
+.intermediate {
+  color: rgb(241, 182, 4);
+  background: rgb(241, 182, 4);
+}
+
+.advanced {
+  color: rgb(244, 137, 37);
+  background: rgb(244, 137, 37);
+}
+
+.guru {
+  color: rgb(237, 44, 73);
+  background: rgb(237, 44, 73);
+}
+
+.challenges p {
+  margin-top: 1rem;
+  font-weight: 400;
+  background: transparent;
+  font-size: 1rem;
+}

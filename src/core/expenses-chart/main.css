@@ -17,7 +17,7 @@ main {
 .expenses-chart {
   display: flex;
   flex-direction: column;
-  width: 560px;
+  width: 550px;
 }
 
 .expenses-chart .header {
