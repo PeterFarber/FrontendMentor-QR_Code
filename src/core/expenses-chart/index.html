@@ -1,0 +1,58 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+
+<link href="src/core/expenses-chart/main.css" rel="stylesheet" />
+
+<script>
+  $(function () {
+    var data = "src/core/expenses-chart/data.json";
+    $.getJSON(data, {
+      format: "json",
+    }).done(function (data) {
+      let max_value = 0;
+      $.each(data, function (i, item) {
+        if (item.amount > max_value) {
+          max_value = item.amount;
+        }
+      });
+
+      $.each(data, function (i, item) {
+        let percent = Math.round((item.amount / (max_value + 40)) * 100);
+        let variant;
+        if (max_value == item.amount) {
+          variant = "cyan";
+        }
+        $("#chart").append(
+          `<div class="col"><div class="value">$${item.amount}</div><div class="bar ${variant}" style="flex-basis: calc(${percent}%);"></div><h3>${item.day}</h3></div>`
+        );
+      });
+    });
+  });
+</script>
+
+<main>
+  <div class="expenses-chart">
+    <div class="header">
+      <h1>My balance</h1>
+      <p>$921.48</p>
+    </div>
+    <div class="content">
+      <h2>Spending - Last 7 days</h2>
+      <div class="chart" id="chart"></div>
+      <div class="info">
+        <div class="total">
+          <h3>Total this month</h3>
+          <p>$478.33</p>
+        </div>
+        <div class="difference">
+          <h3>+2.4%</h3>
+          <p>from last month</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

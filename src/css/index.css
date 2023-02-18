@@ -1,9 +1,6 @@
 /* base */
 @import "base/reset.css";
-
-/* components */
-@import "components/attribution.css";
-@import "components/qr-code.css";
+@import "base/attribution.css";
 
 /* layout */
 @import "layout/footer.css";

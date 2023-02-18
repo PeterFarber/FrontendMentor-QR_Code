@@ -1,0 +1,231 @@
+:root {
+  --soft-red: #ec775f;
+  --cyan: #76b5bc;
+  --cream: #f8e9dd;
+  /* Text */
+  --very-pale-orange: #fffaf5;
+  --dark-brown: #382314;
+  --medium-brown: #93867b;
+}
+
+main {
+  background: var(--cream);
+
+  font-family: "DM Sans";
+}
+
+.expenses-chart {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+}
+
+.expenses-chart .header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  border-radius: 2rem;
+
+  background: var(--soft-red);
+
+  color: var(--very-pale-orange);
+}
+
+.expenses-chart .header h1 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.expenses-chart .header p {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.expenses-chart .header::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: calc(2rem + 24px);
+
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 2px solid var(--very-pale-orange);
+
+  transform: translateY(-50%);
+}
+.expenses-chart .header::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 2rem;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background: var(--dark-brown);
+
+  transform: translateY(-50%);
+}
+
+.expenses-chart .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 2rem;
+
+  background: var(--very-pale-orange);
+
+  color: var(--dark-brown);
+}
+
+.expenses-chart .content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.expenses-chart .chart {
+  height: 275px;
+  padding-bottom: 1rem;
+  display: grid;
+  align-items: flex-end;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0rem;
+}
+
+.expenses-chart .chart .col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+.expenses-chart .chart .col .value {
+  opacity: 0;
+  font-weight: 700;
+  color: var(--very-pale-orange);
+  font-size: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  text-align: center;
+  background: var(--dark-brown);
+}
+.expenses-chart .chart .col:hover .value {
+  opacity: 1;
+}
+
+.expenses-chart .chart .col .bar {
+  display: block;
+  font-weight: 400;
+  background-color: var(--soft-red);
+  width: 75%;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+
+  color: var(--medium-brown);
+  font-size: 1rem;
+}
+
+.expenses-chart .chart .col:hover .bar {
+  opacity: 0.75;
+}
+.expenses-chart .chart .bar.cyan {
+  background: var(--cyan);
+}
+
+.expenses-chart .chart .col h3 {
+  font-weight: 400;
+  padding: 1rem;
+  color: var(--medium-brown);
+  font-size: 1rem;
+}
+
+/* .expenses-chart .chart h3::before {
+  content: "";
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  height: calc(100% - 2rem);
+  width: 100%;
+  background: var(--soft-red);
+  border-radius: 0.5rem;
+} */
+
+.expenses-chart .info {
+  display: flex;
+  align-items: flex-end;
+
+  padding-top: 2rem;
+  border-top: 1px solid var(--cream);
+}
+
+.expenses-chart .total,
+.expenses-chart .difference {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  flex: 1 1 auto;
+}
+
+.expenses-chart .difference {
+  align-items: flex-end;
+}
+.expenses-chart .total h3 {
+  font-size: 1.25rem;
+  color: var(--medium-brown);
+  font-weight: 400;
+}
+
+.expenses-chart .total p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.expenses-chart .difference h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.expenses-chart .difference p {
+  font-size: 1.25rem;
+  color: var(--medium-brown);
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+/* <<main>
+  <div class="expenses-chart">
+    <div class="header">
+      <h1>My balance</h1>
+      <p>$921.48</p>
+    </div>
+    <div class="content">
+      <h2>Spending - Last 7 days</h2>
+      <div class="chart">
+        <div class="col">
+          <h3>mon</h3>
+        </div>
+        tue wed thu fri sat sun
+      </div>
+      <div class="info">
+        <div class="total">
+          <h2>Total this month</h2>
+          <p>$478.33</p>
+        </div>
+        <div class="difference">
+          <h3>+2.4%</h3>
+          <p>from last month</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+ */

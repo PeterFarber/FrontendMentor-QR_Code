@@ -8,10 +8,9 @@ html {
 }
 
 body {
-  background: hsl(212, 45%, 89%);
-  font-family: Outfit;
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
 }
 
 *,

@@ -6,7 +6,7 @@
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
-  - [What I learned](#what-i-learned)
+  <!-- - [What I learned](#what-i-learned) -->
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -16,10 +16,12 @@
 ### Screenshots
 
 QR Code![QR Code](src/core/qr-code/screenshot.png)
+Expenses Chart![QR Code](src/core/expenses-chart/screenshot.png)
 
 ### Links
 
 - [QR Code](https://peterfarber.github.io/FrontendMentor-QR_Code/index.html?page=qr-code) | [Challenge](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)
+- [Expenses Chart](https://peterfarber.github.io/FrontendMentor-QR_Code/index.html?page=expenses-chart) | [Challenge](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt)
 
 <!-- ### What I learned -->
 

@@ -9,14 +9,9 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="src/images/favicon-32x32.png"
+      href="src/images/favicon.jpeg"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+
     <script src="jquery.js"></script>
     <script>
       $(function () {
@@ -24,16 +19,16 @@
         let page = "home";
         if (searchParams.has("page") && searchParams.get("page").length > 0) {
           page = searchParams.get("page");
-          $("#content").load(`src/core/${page}.html`);
+          $("#content").load(`src/core/${page}/index.html`);
         } else {
-          $("#content").load(`src/core/${page}.html`);
+          $("#content").load(`src/core/${page}/index.html`);
         }
         $(`#${page}`).addClass("active");
       });
     </script>
 
     <link href="src/css/index.css" rel="stylesheet" />
-    <title>Frontend Mentor | QR code component (Peter Farber)</title>
+    <title>Frontend Mentor | Challenges (Peter Farber)</title>
   </head>
   <body>
     <header>
@@ -43,6 +38,11 @@
       <ul>
         <li><a id="home" href="index.html?page=home">Home</a></li>
         <li><a id="qr-code" href="index.html?page=qr-code">QR Code</a></li>
+        <li>
+          <a id="expenses-chart" href="index.html?page=expenses-chart"
+            >Expenses Chart</a
+          >
+        </li>
       </ul>
     </nav>
     <main id="content"></main>
