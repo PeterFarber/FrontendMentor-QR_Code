@@ -1,0 +1,51 @@
+nav {
+  flex: 0 1 auto;
+}
+
+nav menu {
+  display: flex;
+
+  margin: 0;
+  padding: 1rem;
+
+  list-style: none;
+}
+
+menu li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+menu li a:hover {
+  background: #fff;
+
+  box-shadow: 0px 1px 2px 0px rgba(31, 50, 81, 0.1),
+    0px 1px 3px 1px rgba(31, 50, 81, 0.15);
+}
+
+menu li a:active {
+  box-shadow: 0px 1px 2px 0px rgba(31, 50, 81, 0.1),
+    0px 2px 6px 2px rgba(31, 50, 81, 0.15);
+}
+
+menu li a {
+  display: block;
+
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+
+  font-weight: 700;
+  font-size: 1rem;
+
+  color: rgb(31, 50, 81);
+  text-decoration: none;
+}
+
+menu li a.active {
+  background: #2d7dfa;
+
+  color: #fff;
+}
+
+menu li a.active:hover {
+  background: #3685ff;
+}

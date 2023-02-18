@@ -9,7 +9,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./root/images/favicon-32x32.png"
+      href="src/images/favicon-32x32.png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,27 +17,42 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="jquery.js"></script>
+    <script>
+      $(function () {
+        let searchParams = new URLSearchParams(window.location.search);
+        let page = "home";
+        if (searchParams.has("page") && searchParams.get("page").length > 0) {
+          page = searchParams.get("page");
+          $("#content").load(`src/core/${page}.html`);
+        } else {
+          $("#content").load(`src/core/${page}.html`);
+        }
+        $(`#${page}`).addClass("active");
+      });
+    </script>
 
-    <link href="./root/css/index.css" rel="stylesheet" />
-    <title>Frontend Mentor | QR code component</title>
+    <link href="src/css/index.css" rel="stylesheet" />
+    <title>Frontend Mentor | QR code component (Peter Farber)</title>
   </head>
   <body>
-    <div class="qr-code">
-      <img src="./root/images/image-qr-code.png" />
-      <div class="content">
-        <h3>Improve your front-end skills by building projects</h3>
-        <p>
-          Scan the QR code to visit Frontend Mentor and take your coding skills
-          to the next level
-        </p>
+    <header>
+      <b>Frontend Mentor Challenges</b>
+    </header>
+    <nav>
+      <menu>
+        <li><a id="home" href="index.html?page=home">Home</a></li>
+        <li><a id="qr-code" href="index.html?page=qr-code">QR Code</a></li>
+      </menu>
+    </nav>
+    <main id="content"></main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Peter Farber</a>.
       </div>
-    </div>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Peter Farber</a>.
-    </div>
+    </footer>
   </body>
 </html>
