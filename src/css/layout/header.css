@@ -3,11 +3,11 @@ header {
 
   padding: 1rem;
 
-  background: #2d7dfa;
+  background: #fff;
   box-shadow: 0px 1px 2px 0px rgba(31, 50, 81, 0.15),
-    0px 2px 6px 2px rgba(31, 50, 81, 0.3);
+    0px 1px 3px 1px rgba(31, 50, 81, 0.3);
 
-  color: #fff;
+  color: rgb(31, 50, 81);
 }
 
 b {
