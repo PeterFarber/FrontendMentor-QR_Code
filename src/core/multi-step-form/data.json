@@ -1,0 +1,100 @@
+[
+  {
+    "label": "your info",
+    "header": "Personal Info",
+    "subheader": "Please provide your name, email address, and phone number.",
+    "form": [
+      {
+        "id": "name",
+        "label": "Name",
+        "type": "text",
+        "placeholder": "e.g. Stephen King",
+        "required": true
+      },
+      {
+        "id": "email",
+        "label": "Email Address",
+        "type": "text",
+        "placeholder": "e.g. stephenking@lorem.com",
+        "required": true
+      },
+      {
+        "id": "phone",
+        "label": "Phone Number",
+        "type": "text",
+        "placeholder": "e.g. +1 234 567 890",
+        "required": true
+      }
+    ]
+  },
+  {
+    "label": "select plan",
+    "header": "Select your plan",
+    "subheader": "You have the option of monthly or yearly billing.",
+    "form": [
+      {
+        "id": "plan",
+        "label": "Arcade",
+        "type": "radio",
+        "value": "arcade",
+        "cost": 9
+      },
+      {
+        "id": "plan",
+        "label": "Advanced",
+        "type": "radio",
+        "value": "advanced",
+        "cost": 12
+      },
+      {
+        "id": "plan",
+        "label": "Pro",
+        "type": "radio",
+        "value": "pro",
+        "cost": 15
+      },
+      {
+        "id": "billing",
+        "label": "Monthly",
+        "subLabel": "Yearly",
+        "type": "switch"
+      }
+    ]
+  },
+  {
+    "label": "add-ons",
+    "header": "Pick add-ons",
+    "subheader": "Add-ons help enhance your gaming experience.",
+    "form": [
+      {
+        "id": "online_service",
+        "label": "Online service",
+        "subLabel": "Access to multiplayer games",
+        "type": "checkbox",
+        "cost": 1,
+        "checked": false
+      },
+      {
+        "id": "larger_storage",
+        "label": "Larger storage",
+        "subLabel": "Extra 1TB of cloud save",
+        "type": "checkbox",
+        "cost": 2,
+        "checked": false
+      },
+      {
+        "id": "customizable_profile",
+        "label": "Customizable Profile",
+        "subLabel": "Custom theme on your profile",
+        "type": "checkbox",
+        "cost": 2,
+        "checked": false
+      }
+    ]
+  },
+  {
+    "label": "summary",
+    "header": "Finishing up",
+    "subheader": "Double-check everything looks OK before confirming."
+  }
+]

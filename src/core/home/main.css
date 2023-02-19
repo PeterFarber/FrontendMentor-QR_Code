@@ -2,9 +2,10 @@
   padding: 2rem;
   display: grid;
   align-content: flex-start;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 
+  justify-items: center;
   font-family: Outfit;
 }
 

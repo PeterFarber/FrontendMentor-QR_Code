@@ -1,0 +1,547 @@
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  src: url(assets/fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  src: url(assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  src: url(assets/fonts/Ubuntu-Bold.ttf);
+}
+
+main {
+  background: var(--magnolia);
+
+  font-family: "Ubuntu";
+}
+
+.multi {
+  display: grid;
+  grid-template-columns: 274px 548px;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--white);
+  box-shadow: 0px 1px 2px 0px rgba(31, 50, 81, 0.1),
+    0px 1px 3px 1px rgba(31, 50, 81, 0.15);
+}
+
+.multi .sidebar {
+  margin: 0px;
+  background: url("./assets/images/bg-sidebar-desktop.svg");
+  height: 568px;
+  list-style: none;
+}
+
+.multi .sidebar li {
+  display: flex;
+  align-items: center;
+  margin-block: 2rem;
+}
+
+.multi .sidebar li.active .num {
+  background: var(--light-blue);
+  color: var(--marine-blue);
+}
+
+.multi .sidebar li .num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 1rem;
+  border-radius: 100%;
+  border: 1px solid var(--alabaster);
+  color: var(--alabaster);
+}
+
+.multi .sidebar li .info {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.multi .sidebar li .info h2 {
+  color: var(--cool-gray);
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.multi .sidebar li .info h3 {
+  color: var(--alabaster);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+}
+
+.multi .multi-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4.25rem;
+}
+
+.multi .multi-content h1 {
+  color: var(--marine-blue);
+  margin-bottom: 1rem;
+}
+
+.multi .multi-content p {
+  color: var(--cool-gray);
+  margin-bottom: 2rem;
+}
+.multi form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.field label {
+  color: var(--marine-blue);
+  margin-bottom: 0.3rem;
+}
+
+.field input {
+  position: relative;
+  display: flex;
+  color: var(--marine-blue);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid var(--light-gray);
+  background-color: transparent;
+}
+
+.field.error input {
+  border-color: var(--strawberry-red);
+}
+
+.field input:focus {
+  border-color: var(--purplish-blue);
+}
+
+.field.error::before {
+  position: absolute;
+  content: "This field is required";
+  top: 0;
+  right: 0;
+  color: var(--strawberry-red);
+  font-weight: 500;
+}
+
+.btns {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+.btns button {
+  font-size: 1rem;
+  background: var(--marine-blue);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  font-weight: 700;
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btns button:hover {
+  background: #174a8b;
+}
+
+.btns button:active {
+  background: #1c5fb6;
+}
+
+.btns .variant {
+  padding-inline: 0px;
+  background: transparent !important;
+  color: var(--marine-blue);
+}
+.btns .variant:hover {
+  color: #174a8b;
+}
+
+.btns .variant:active {
+  color: #1c5fb6;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.radio_field {
+  display: flex;
+  position: relative;
+}
+
+.radio_field input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.radio_field label {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: var(--marine-blue);
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.radio_field input:checked + label {
+  background: var(--alabaster);
+  border-color: var(--purplish-blue);
+}
+
+.radio_field label img {
+  width: 40px;
+  height: 40px;
+}
+.radio_field label h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.25rem;
+}
+
+.radio_field label p {
+  margin: 0 !important;
+  font-weight: 100;
+}
+
+.switch {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+  background: var(--magnolia);
+  padding: 0.5rem;
+  color: var(--light-gray);
+
+  grid-column-start: 1;
+  grid-column-end: 4;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.switch input {
+  visibility: hidden;
+  position: absolute;
+}
+
+.switch label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid var(--light-gray);
+  border-radius: 100rem;
+  color: var(--marine-blue);
+  width: 40px;
+  height: 22px;
+  cursor: pointer;
+  order: 2;
+
+  background: var(--marine-blue);
+}
+
+.switch > span:first-of-type {
+  order: 1;
+  text-align: right;
+  color: var(--marine-blue);
+
+  padding-right: 1.5rem;
+}
+.switch > span:last-of-type {
+  order: 3;
+  color: var(--cool-gray);
+
+  padding-left: 1.5rem;
+}
+
+.switch > input + label span {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  left: 4px;
+  background: #fff;
+}
+
+.switch > input:checked + label span {
+  left: auto;
+  right: 4px !important;
+}
+
+.switch > input:checked ~ span:first-of-type {
+  color: var(--cool-gray);
+}
+
+.switch > input:checked ~ span:last-of-type {
+  color: var(--marine-blue);
+}
+
+.checkbox {
+  margin-bottom: 1rem;
+}
+
+.checkbox input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.checkbox input + label {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  color: var(--marine-blue);
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.checkbox input + label > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  margin-left: 1rem;
+}
+
+.checkbox input:checked + label {
+  background: var(--alabaster);
+  border-color: var(--purplish-blue);
+}
+
+.checkbox input + label > span {
+  flex: 0 1 auto;
+
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--light-gray);
+  border-radius: 0.2rem;
+}
+
+.checkbox input + label h3 {
+  font-size: 1rem;
+  color: var(--marine-blue);
+  margin-bottom: 0.25rem;
+}
+
+.checkbox input + label h4 {
+  font-size: 0.9rem;
+  color: var(--cool-gray);
+  font-weight: 400;
+}
+
+.checkbox input + label h5 {
+  flex: 0 1 auto;
+  font-size: 0.9rem;
+  color: var(--purplish-blue);
+  font-weight: 500;
+}
+
+.checkbox input:checked + label > span {
+  position: relative;
+  border: 1px solid var(--purplish-blue);
+  background: var(--purplish-blue);
+}
+
+.checkbox label:hover {
+  position: relative;
+  border: 1px solid var(--purplish-blue);
+}
+.checkbox input:checked + label > span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary .info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--alabaster);
+  border-radius: 0.5rem;
+}
+.summary .info .billing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.summary .info .billing h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--marine-blue);
+}
+.summary .info .billing a {
+  font-size: 1rem;
+  color: var(--marine-blue);
+}
+
+.summary .info .billing a:hover {
+  font-size: 1rem;
+  color: var(--purplish-blue);
+}
+
+.summary .info .cost {
+  color: var(--marine-blue);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.summary .info .services {
+  color: var(--cool-gray);
+}
+
+.summary .info .services .service {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.summary .info .services .service h4 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.summary .info .services .service h5 {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--marine-blue);
+}
+
+.summary .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.summary .total h4 {
+  color: var(--cool-gray);
+  font-weight: 400;
+}
+
+.summary .total h5 {
+  color: var(--purplish-blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.thankyou img {
+  width: 80px;
+}
+
+.thankyou h1 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--marine-blue);
+}
+
+.thankyou p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--cool-gray);
+}
+
+.dnone {
+  display: none;
+}
+
+/* <div class="summary">
+        <div class="info">
+          <div class="billing">
+            <div class="data">
+              <h3>Arcade (Monthly)</h3>
+              <a href="#">Change</a>
+            </div>
+            <div class="cost">$9/mo</div>
+          </div>
+          <div class="services">
+            <div class="service">
+              <h4>Online Service</h4>
+              <h5>+$1/mo</h5>
+            </div>
+            <div class="service">
+              <h4>Larger Storage</h4>
+              <h5>+$1/mo</h5>
+            </div>
+          </div>
+        </div>
+        <div class="total">
+          <h4>Total (per month)</h4>
+          <h5>$12/mo</h5>
+        </div>
+      </div> */

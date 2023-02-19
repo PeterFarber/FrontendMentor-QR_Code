@@ -17,11 +17,13 @@
 
 QR Code![QR Code](src/core/qr-code/screenshot.png)
 Expenses Chart![QR Code](src/core/expenses-chart/screenshot.png)
+Multi Step Form![QR Code](src/core/multi-step-form/screenshot.png)
 
 ### Links
 
 - [QR Code](https://peterfarber.github.io/FrontendMentor-QR_Code/index.html?page=qr-code) | [Challenge](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)
 - [Expenses Chart](https://peterfarber.github.io/FrontendMentor-QR_Code/index.html?page=expenses-chart) | [Challenge](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt)
+- [Multi Step Form](https://peterfarber.github.io/FrontendMentor-QR_Code/index.html?page=multi-step-form) | [Challenge](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ)
 
 <!-- ### What I learned -->
 
